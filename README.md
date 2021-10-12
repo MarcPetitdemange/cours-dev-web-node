@@ -1,5 +1,5 @@
-#TP n°1
+# TP n°1
 ## Détail du TP
-
-* Création d'un fichier HelloWorld 
-* Création d'un début de serveur Node.Js
+### Exercices
+1. Création d'un fichier HelloWorld 
+2. Création d'un début de serveur Node.Js
