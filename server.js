@@ -5,7 +5,6 @@ var server = http.createServer(function (request, response) {
 
     let page = request.url;
     console.log(page);
-    logger.hagridLogger(page) //Hagrid va nous dire sur quelle page on se trouve ! On utilise notre hagridLogger écrit précédemment
 
     response.writeHead(200, {"Content-Type" : "text/plain; charset=utf-8"});
 
@@ -21,7 +20,7 @@ var server = http.createServer(function (request, response) {
         logger.error("C'est très formel tout ça !"); //On utilise notre error logger écrit précédemment
     } else{
         response.write("Tu t'es perdu dans le chemin de travers Harry !");
-        logger.hagridLogger(page) //Tu t'es perdu Harry ! On réutilise notre hagridLogger !
+        logger.hagridLogger(page) //Hagrid va nous dire que l'on s'est perdu ! On utilise notre hagridLogger !
     }
     response.end();
 });
