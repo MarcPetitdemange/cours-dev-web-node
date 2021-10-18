@@ -3,3 +3,4 @@
 ### Exercices
 1. Création d'un fichier HelloWorld 
 2. Création d'un début de serveur Node.Js
+3. (a-b) Exercices sur les routes
