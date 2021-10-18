@@ -24,4 +24,4 @@ var server = http.createServer(function (request, response) {
     }
     response.end();
 });
-server.listen(9000); //Le serveur écoute sur le port 9000
+server.listen(9000);
