@@ -1,5 +1,5 @@
-var http = require('http'); //On inclut le module http
-var logger = require('./moduleDeLog.js'); //On inclut notre module perso !
+import * as http from 'http'; //Import du module http syntaxe ES6
+import * as logger from './moduleDeLog.js' //Import de notre module de log syntaxe ES6
 
 var server = http.createServer(function (request, response) {
 

@@ -14,7 +14,4 @@ var hagridLogger = function (log) {
     console.log("HAGRID TE DIT : " + log);
 }
 
-exports.error = error;
-exports.debug = debug;
-exports.info = info;
-exports.hagridLogger = hagridLogger;
+export {error,info,hagridLogger,debug};
