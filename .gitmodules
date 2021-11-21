@@ -1,0 +1,4 @@
+[submodule "db"]
+	path = db
+	url = https://github.com/MarcPetitdemange/cours-dev-web-tp1-mongodb
+	branch = master
