@@ -2,3 +2,7 @@
 	path = db
 	url = https://github.com/MarcPetitdemange/cours-dev-web-tp1-mongodb
 	branch = master
+[submodule "cours-dev-web-tp1-mongodb"]
+	path = cours-dev-web-tp1-mongodb
+	url = https://github.com/MarcPetitdemange/cours-dev-web-tp1-mongodb
+	branch = master
