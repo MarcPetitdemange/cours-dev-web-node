@@ -1,15 +1,24 @@
 import express from 'express';
 import * as logger from './moduleDeLog.js'
 import * as path from "path";
-import mongoose from "mongoose";
+import mongoose from "mongoose"; //Import de mongoose
+import {User} from "./user.js"; //Import de notre modèle pour l'utilisateur
 
 var app = express();
 const __dirname = path.resolve();
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost:27017/Users').then(() => {
-    console.log("Connecté à la base de données");
-})
+const connection = mongoose.connect('mongodb://admin:root@localhost:27017/Users').then(() => { //Connection à la base de données
+    console.log("Connecté à la base de données"); //On retourne un message si on est bien connecté
+});
+
+app.get("/usersDeBeaubatons", function (req, res, next) {
+    logger.info("On va retourner tous les utilisateurs de Beaubâtons !");
+    User.find({}, (err,users) => {
+        return res.send(JSON.stringify(users));
+    });
+});
+
 
 app.get('/',function (req, res, next) {
     res.send("Merci de te présenter au choixpeau jeune sorcier !");
