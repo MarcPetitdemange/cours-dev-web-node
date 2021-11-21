@@ -1,10 +1,15 @@
-import express from 'express'; //Import du module express
+import express from 'express';
 import * as logger from './moduleDeLog.js'
 import * as path from "path";
+import mongoose from "mongoose";
 
 var app = express();
-const __dirname = path.resolve(); //On récupère le répo
-app.use(express.static(__dirname + '/public')); //On expose notre fichier de ressources
+const __dirname = path.resolve();
+app.use(express.static(__dirname + '/public'));
+
+mongoose.connect('mongodb://localhost:27017/Users').then(() => {
+    console.log("Connecté à la base de données");
+})
 
 app.get('/',function (req, res, next) {
     res.send("Merci de te présenter au choixpeau jeune sorcier !");
