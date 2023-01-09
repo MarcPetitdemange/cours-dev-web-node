@@ -3,12 +3,12 @@ import * as logger from './moduleDeLog.js'
 import * as path from "path";
 import mongoose from "mongoose"; //Import de mongoose
 import {User} from "./user.js"; //Import de notre modèle pour l'utilisateur
-
+mongoose.set("strictQuery", false);
 var app = express();
 const __dirname = path.resolve();
 app.use(express.static(__dirname + '/public'));
 
-const connection = mongoose.connect('mongodb://admin:root@localhost:27017/Users').then(() => { //Connection à la base de données
+const connection = mongoose.connect('mongodb://admin:root@localhost:27017/Users?authSource=admin').then(() => { //Connection à la base de données
     console.log("Connecté à la base de données"); //On retourne un message si on est bien connecté
 });
 
