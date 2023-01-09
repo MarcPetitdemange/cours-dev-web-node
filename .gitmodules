@@ -1,5 +1,5 @@
 [submodule "db"]
 	path = db
-	url = https://github.com/MarcPetitdemange/cours-dev-web-tp1-mongodb
+	url = https://github.com/MarcPetitdemange/cours-dev-web-node-mongodb.git
 	branch = master
 
